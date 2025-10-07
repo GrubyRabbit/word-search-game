@@ -171,20 +171,20 @@
             {
                 title: "Level 1",
                 description: "",
-                words: ["disclosure", "TDR", "task", "TPM", "manual"],
-                size: 6
+                words: ["LEGAL", "TDR", "TASK", "TPM", "MANUAL"],
+                size: 8
             },
             {
                 title: "Level 2",
                 description: "",
-                words: ["copilot", "approval", "optimizely", "gatekeeper", "disclaimer"],
-                size: 8
+                words: ["COPILOT", "CAT", "GIAT", "CONTENT", "WORKSHOP"],
+                size: 10
             },
             {
                 title: "Level 3",
                 description: "",
-                words: ["legal", "CAT", "GIAT", "content", "workshop"],
-                size: 10
+                words: ["DISCLOSURE", "APPROVAL", "OPTIMIZELY", "GATEKEEPER", "DISCLAIMER"],
+                size: 12
             },
         ];
         
@@ -462,13 +462,13 @@
             if (level.words.includes(word) && !foundWords.has(word)) {
                 foundWords.add(word);
                 animateFoundWord(word, selectedCells);
-                showMessage(`Brawo! Znaleziono: ${word}!`, 'text-green-500');
+                showMessage(`NICE! You found: ${word}!`, 'text-green-500');
             } else if (level.words.includes(reversedWord) && !foundWords.has(reversedWord)) {
                 foundWords.add(reversedWord);
                 animateFoundWord(reversedWord, selectedCells);
-                showMessage(`Brawo! Znaleziono: ${reversedWord}!`, 'text-green-500');
+                showMessage(`NICE! You found: ${reversedWord}!`, 'text-green-500');
             } else {
-                showMessage("Spróbuj ponownie!", 'text-red-500');
+                showMessage("Try again!", 'text-red-500');
             }
             clearSelection();
         }
@@ -499,7 +499,7 @@
         // Ekran ukończenia poziomu
         function showLevelCompleted() {
             createConfetti(100);
-            showMessage(`Poziom ${currentLevel + 1} ukończony!`, 'text-green-600');
+            showMessage(`Level ${currentLevel + 1} finished!`, 'text-green-600');
             setTimeout(() => {
                 if (currentLevel < levels.length - 1) {
                     currentLevel++;
